@@ -1,0 +1,51 @@
+{
+  "directories": {
+    "test": "test"
+  },
+  "author": "azu",
+  "license": "MIT",
+  "files": [
+    "bin/",
+    "lib/",
+    "src/",
+    "default-labels.json"
+  ],
+  "name": "@azu/github-label-setup",
+  "version": "1.0.0",
+  "description": "GitHub label setup script.",
+  "main": "lib/github-label-setup.js",
+  "scripts": {
+    "test": "mocha test/",
+    "build": "cross-env NODE_ENV=production babel src --out-dir lib --source-maps",
+    "watch": "babel src --out-dir lib --watch --source-maps",
+    "prepublish": "npm run --if-present build"
+  },
+  "keywords": [
+    "github",
+    "label"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azu/github-label-setup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/azu/github-label-setup/issues"
+  },
+  "homepage": "https://github.com/azu/github-label-setup",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-jsdoc-to-assert": "^4.0.0",
+    "babel-preset-power-assert": "^1.0.0",
+    "babel-register": "^6.24.1",
+    "cross-env": "^5.0.0",
+    "mocha": "^3.4.1",
+    "power-assert": "^1.4.2"
+  },
+  "dependencies": {
+    "git-remote-origin-url": "^2.0.0",
+    "github-label-sync": "^1.2.0",
+    "hosted-git-info": "^2.4.2",
+    "meow": "^3.7.0"
+  }
+}
