@@ -1,35 +1,35 @@
 [
   {
     "name": "duplicate",
-    "color": "#ededed"
+    "color": "ededed"
   },
   {
     "name": "help wanted",
-    "color": "#e99695"
+    "color": "e99695"
   },
   {
     "name": "good for beginner",
-    "color": "#ffc0cb"
+    "color": "ffc0cb"
   },
   {
     "name": "Priority: Critical",
-    "color": "#ee0701"
+    "color": "ee0701"
   },
   {
     "name": "Priority: High",
-    "color": "#d93f0b"
+    "color": "d93f0b"
   },
   {
     "name": "Priority: Low",
-    "color": "#0e8a16"
+    "color": "0e8a16"
   },
   {
     "name": "Priority: Medium",
-    "color": "#fbca04"
+    "color": "fbca04"
   },
   {
     "name": "Status: Abandoned",
-    "color": "#000000",
+    "color": "000000",
     "aliases": [
       "wontfix",
       "invalid"
@@ -37,54 +37,54 @@
   },
   {
     "name": "Status: Blocked",
-    "color": "#ee0701"
+    "color": "ee0701"
   },
   {
     "name": "Status: In Progress",
-    "color": "#cccccc"
+    "color": "cccccc"
   },
   {
     "name": "Status: Proposal",
-    "color": "#d4c5f9"
+    "color": "d4c5f9"
   },
   {
     "name": "Status: Ready for PR",
-    "color": "#c2e0c6"
+    "color": "c2e0c6"
   },
   {
     "name": "Status: Review Needed",
-    "color": "#fbca04"
+    "color": "fbca04"
   },
   {
     "name": "Type: Breaking Change",
-    "color": "#b60205"
+    "color": "b60205"
   },
   {
     "name": "Type: Bug",
-    "color": "#ee0701",
+    "color": "ee0701",
     "aliases": [
       "bug"
     ]
   },
   {
     "name": "Type: Documentation",
-    "color": "#5319e7"
+    "color": "5319e7"
   },
   {
     "name": "Type: Feature",
-    "color": "#1d76db"
+    "color": "1d76db"
   },
   {
     "name": "Type: Refactoring",
-    "color": "#fbca04"
+    "color": "fbca04"
   },
   {
     "name": "Type: Maintenance",
-    "color": "#0e8a16"
+    "color": "0e8a16"
   },
   {
     "name": "Type: Question",
-    "color": "#cc317c",
+    "color": "cc317c",
     "aliases": [
       "question"
     ]
