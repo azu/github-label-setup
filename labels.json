@@ -45,11 +45,20 @@
   },
   {
     "name": "Status: Proposal",
-    "color": "d4c5f9"
+    "color": "d4c5f9",
+    "aliases": [
+      "idea",
+      "Idea",
+      "proposal",
+      "Proposal"
+    ]
   },
   {
     "name": "Status: Ready for PR",
-    "color": "c2e0c6"
+    "color": "c2e0c6",
+    "aliases": [
+      "Patch Welcome"
+    ]
   },
   {
     "name": "Status: Review Needed",
@@ -57,7 +66,10 @@
   },
   {
     "name": "Type: Breaking Change",
-    "color": "b60205"
+    "color": "b60205",
+    "aliases": [
+      "breaking"
+    ]
   },
   {
     "name": "Type: Bug",
@@ -68,7 +80,11 @@
   },
   {
     "name": "Type: Documentation",
-    "color": "5319e7"
+    "color": "5319e7",
+    "aliases": [
+      "documents",
+      "document"
+    ]
   },
   {
     "name": "Type: Feature",
