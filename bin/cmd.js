@@ -10,7 +10,6 @@ const cli = meow(`
     Options
 
       -h, --help                  output usage information
-      -V, --version               output the version number
       -l, --labels <path>         the path to look for the label configuration in. Default: labels.json
       --token <token>  a GitHub access token (also settable with a GITHUB_ACCESS_TOKEN environment variable)
       -d, --dry-run               calculate the required label changes but do not apply them
