@@ -37,6 +37,8 @@ labels can be set `require`able path like npm packages.
 
     $ github-label-setup --token xxx --labels @owner/github-label-presets
 
+See [Label JSON](https://github.com/Financial-Times/github-label-sync#label-json "Label JSON") format.
+
 ## Default Labels
 
 That is opinionated labels. 
