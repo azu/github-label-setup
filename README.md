@@ -1,16 +1,53 @@
 # @azu/github-label-setup
 
-GitHub label setup script.
+Opinionated GitHub label setup tool.
+
+- Create starter GitHub labels
+- Migrate exists labels
+- No configuration
 
 ## Install
 
 Install with [npm](https://www.npmjs.com/):
 
-    npm install @azu/github-label-setup
+    npm install @azu/github-label-setup -g
 
 ## Usage
 
-- [ ] Write usage instructions
+This tool work without no configuration.
+
+    Usage
+      $ github-label-setup --token xxx
+
+    Options
+
+      -h, --help                  output usage information
+      -V, --version               output the version number
+      -l, --labels <path>         the path or npm packages name to look for the label configuration in. Default: labels.json
+      --token <token>  a GitHub access token (also settable with a GITHUB_ACCESS_TOKEN environment variable)
+      -d, --dry-run               calculate the required label changes but do not apply them
+
+This tool is wrapper of `github-label-sync`.
+
+- [Financial-Times/github-label-sync: Synchronise your GitHub labels with as few destructive operations as possible](https://github.com/Financial-Times/github-label-sync "Financial-Times/github-label-sync: Synchronise your GitHub labels with as few destructive operations as possible")
+
+### Npm packages for labels
+
+labels can be set `require`able path like npm packages.
+
+    $ github-label-setup --token xxx --labels @owner/github-label-presets
+
+## Default Labels
+
+That is opinionated labels. 
+
+## Related
+
+- [yoshuawuyts/github-standard-labels: Create a standard set of issue labels for a GitHub project](https://github.com/yoshuawuyts/github-standard-labels "yoshuawuyts/github-standard-labels: Create a standard set of issue labels for a GitHub project")
+- [Financial-Times/github-label-sync: Synchronise your GitHub labels with as few destructive operations as possible](https://github.com/Financial-Times/github-label-sync "Financial-Times/github-label-sync: Synchronise your GitHub labels with as few destructive operations as possible")
+- [MunGell/awesome-for-beginners: A list of awesome beginners-friendly projects.](https://github.com/MunGell/awesome-for-beginners "MunGell/awesome-for-beginners: A list of awesome beginners-friendly projects.")
+- [himynameisdave/git-labelmaker: Manage your GitHub labels from the command line!](https://github.com/himynameisdave/git-labelmaker "himynameisdave/git-labelmaker: Manage your GitHub labels from the command line!")
+- [Sane GitHub Labels – Dave Lunny – Medium](https://medium.com/@dave_lunny/sane-github-labels-c5d2e6004b63 "Sane GitHub Labels – Dave Lunny – Medium")
 
 ## Changelog
 

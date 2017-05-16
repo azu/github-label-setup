@@ -8,7 +8,7 @@
     "color": "#e99695"
   },
   {
-    "name": "starter",
+    "name": "good for beginner",
     "color": "#ffc0cb"
   },
   {
@@ -29,7 +29,11 @@
   },
   {
     "name": "Status: Abandoned",
-    "color": "#000000"
+    "color": "#000000",
+    "aliases": [
+      "wontfix",
+      "invalid"
+    ]
   },
   {
     "name": "Status: Blocked",
@@ -61,22 +65,32 @@
   },
   {
     "name": "Type: Bug",
-    "color": "#ee0701"
+    "color": "#ee0701",
+    "aliases": [
+      "bug"
+    ]
   },
   {
     "name": "Type: Documentation",
     "color": "#5319e7"
   },
   {
-    "name": "Type: Enhancement",
+    "name": "Type: Feature",
     "color": "#1d76db"
   },
   {
-    "name": "Type: Maintenance",
+    "name": "Type: Refactoring",
     "color": "#fbca04"
   },
   {
+    "name": "Type: Maintenance",
+    "color": "#0e8a16"
+  },
+  {
     "name": "Type: Question",
-    "color": "#cc317c"
+    "color": "#cc317c",
+    "aliases": [
+      "question"
+    ]
   }
 ]
