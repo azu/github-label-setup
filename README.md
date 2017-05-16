@@ -2,6 +2,8 @@
 
 Opinionated GitHub label setup tool.
 
+[![demo](./img/demo.png)](https://github.com/azu/github-label-setup/issues/1)
+
 - Create starter GitHub labels
 - Migrate exists labels
 - No configuration
@@ -42,6 +44,8 @@ See [Label JSON](https://github.com/Financial-Times/github-label-sync#label-json
 ## Default Labels
 
 That is opinionated labels. 
+
+[![demo](./img/demo.png)](https://github.com/azu/github-label-setup/issues/1)
 
 - duplicate
     - Duplicated issue
