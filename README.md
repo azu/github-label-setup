@@ -41,6 +41,33 @@ labels can be set `require`able path like npm packages.
 
 That is opinionated labels. 
 
+- duplicate
+    - Duplicated issue
+- help wanted
+    - help/need idea issue
+- good for beginner
+    - Easy to fix issue
+    - [MunGell/awesome-for-beginners: A list of awesome beginners-friendly projects.](https://github.com/MunGell/awesome-for-beginners "MunGell/awesome-for-beginners: A list of awesome beginners-friendly projects.")
+- Priority: Critical
+- Priority: High
+- Priority: Low
+- Priority: Medium
+- Status: Abandoned
+- Status: Blocked
+- Status: In Progress
+- Status: Proposal
+- Status: Ready for PR
+- Status: Review Needed
+- Type: Breaking Change
+- Type: Bug
+- Type: Feature
+- Type: Documentation
+- Type: Refactoring
+- Type: Maintenance
+    - Related: [Conventional Commits](https://conventionalcommits.org/ "Conventional Commits")
+- Type: Question"
+
+
 ## Related
 
 - [yoshuawuyts/github-standard-labels: Create a standard set of issue labels for a GitHub project](https://github.com/yoshuawuyts/github-standard-labels "yoshuawuyts/github-standard-labels: Create a standard set of issue labels for a GitHub project")
