@@ -29,6 +29,9 @@ This tool work without no configuration.
       --token <token>  a GitHub access token (also settable with a GITHUB_ACCESS_TOKEN environment variable)
       -d, --dry-run               calculate the required label changes but do not apply them
 
+You'll also need a GitHub access token ready so that the the tool will have access to your repositories.
+You can [generate an access token here](https://github.com/settings/tokens), be sure to allow the `"repo"` scope.
+
 This tool is wrapper of `github-label-sync`.
 
 - [Financial-Times/github-label-sync: Synchronise your GitHub labels with as few destructive operations as possible](https://github.com/Financial-Times/github-label-sync "Financial-Times/github-label-sync: Synchronise your GitHub labels with as few destructive operations as possible")
