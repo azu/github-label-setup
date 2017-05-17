@@ -9,7 +9,14 @@
   },
   {
     "name": "good for beginner",
-    "color": "ffc0cb"
+    "color": "ffc0cb",
+    "aliases": [
+      "beginner-friendly",
+      "beginner",
+      "good-starter-issue",
+      "starter-issue",
+      "starter"
+    ]
   },
   {
     "name": "Priority: Critical",
@@ -37,7 +44,10 @@
   },
   {
     "name": "Status: Blocked",
-    "color": "ee0701"
+    "color": "ee0701",
+    "aliases": [
+      "blocked"
+    ]
   },
   {
     "name": "Status: In Progress",
@@ -69,7 +79,8 @@
     "name": "Type: Breaking Change",
     "color": "b60205",
     "aliases": [
-      "breaking"
+      "breaking",
+      "breaking-change"
     ]
   },
   {
@@ -89,7 +100,10 @@
   },
   {
     "name": "Type: Feature",
-    "color": "1d76db"
+    "color": "1d76db",
+    "aliases": [
+      "enhancement"
+    ]
   },
   {
     "name": "Type: Refactoring",
@@ -99,7 +113,11 @@
     "name": "Type: Maintenance",
     "color": "0e8a16",
     "aliases": [
-      "greenkeeper"
+      "greenkeeper",
+      "maintenance",
+      "refactor",
+      "testing",
+      "test"
     ]
   },
   {
