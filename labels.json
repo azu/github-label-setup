@@ -50,7 +50,8 @@
       "idea",
       "Idea",
       "proposal",
-      "Proposal"
+      "Proposal",
+      "discussion",
     ]
   },
   {
@@ -96,7 +97,10 @@
   },
   {
     "name": "Type: Maintenance",
-    "color": "0e8a16"
+    "color": "0e8a16",
+    "aliases": [
+      "greenkeeper"
+    ]
   },
   {
     "name": "Type: Question",
