@@ -8,12 +8,13 @@
     "color": "e99695"
   },
   {
-    "name": "good for beginner",
-    "color": "ffc0cb",
+    "name": "good first issue",
+    "color": "7057ff",
     "aliases": [
       "beginner-friendly",
       "beginner",
       "good-starter-issue",
+      "good for beginner",
       "starter-issue",
       "starter"
     ]

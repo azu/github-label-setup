@@ -53,7 +53,7 @@ That is opinionated labels.
     - Duplicated issue
 - help wanted
     - help/need idea issue
-- good for beginner
+- good first issue
     - Easy to fix issue
     - [MunGell/awesome-for-beginners: A list of awesome beginners-friendly projects.](https://github.com/MunGell/awesome-for-beginners "MunGell/awesome-for-beginners: A list of awesome beginners-friendly projects.")
 - Priority: Critical
