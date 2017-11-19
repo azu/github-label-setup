@@ -66,10 +66,11 @@
     ]
   },
   {
-    "name": "Status: Ready for PR",
+    "name": "Status: PR Welcome",
     "color": "c2e0c6",
     "aliases": [
-      "Patch Welcome"
+      "Patch Welcome",
+      "Status: Ready for PR"
     ]
   },
   {
