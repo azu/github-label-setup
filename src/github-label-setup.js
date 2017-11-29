@@ -49,7 +49,6 @@ module.exports = function({
                               allowAddedLabels
                           }) {
     const repoPromise = repo ? Promise.resolve(repo) : getRepositoryInfo();
-    console.log("allowAddedLabels", allowAddedLabels);
     return repoPromise.then(repoPath => {
         assert(repoPath, "repo should be needed.");
         const labelFilePath = tryResolve(labels);

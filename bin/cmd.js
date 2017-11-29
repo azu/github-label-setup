@@ -16,10 +16,20 @@ const cli = meow(`
       -A, --allow-added-labels    allow additional labels in the repo, and don't delete them
 
 `, {
-    alias: {
-        d: 'dry-run',
-        l: 'labels',
-        A: 'allow-added-labels'
+
+    flags: {
+        dryRun: {
+            type: 'boolean',
+            alias: 'd'
+        },
+        labels: {
+            type: 'string',
+            alias: 'l'
+        },
+        allowAddedLabels: {
+            type: 'boolean',
+            alias: 'A'
+        }
     }
 });
 /*
