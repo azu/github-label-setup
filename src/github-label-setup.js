@@ -38,15 +38,18 @@ const format = {
  * @param repo
  * @param labels
  * @param dryRun
+ * @param allowAddedLabels
  * @returns {Promise}
  */
 module.exports = function({
                               token,
                               repo,
                               labels = path.join(__dirname, "..", "labels.json"),
-                              dryRun
+                              dryRun,
+                              allowAddedLabels
                           }) {
     const repoPromise = repo ? Promise.resolve(repo) : getRepositoryInfo();
+    console.log("allowAddedLabels", allowAddedLabels);
     return repoPromise.then(repoPath => {
         assert(repoPath, "repo should be needed.");
         const labelFilePath = tryResolve(labels);
@@ -59,6 +62,7 @@ module.exports = function({
             repo: repoPath,
             labels: labelJSON,
             dryRun,
+            allowAddedLabels,
             log: console,
         });
     });

@@ -13,11 +13,13 @@ const cli = meow(`
       -l, --labels <path>         the path to look for the label configuration in. Default: labels.json
       --token <token>  a GitHub access token (also settable with a GITHUB_ACCESS_TOKEN environment variable)
       -d, --dry-run               calculate the required label changes but do not apply them
+      -A, --allow-added-labels    allow additional labels in the repo, and don't delete them
 
 `, {
     alias: {
         d: 'dry-run',
         l: 'labels',
+        A: 'allow-added-labels'
     }
 });
 /*
