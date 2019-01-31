@@ -5,8 +5,8 @@ Opinionated GitHub label setup tool.
 [![demo](./img/demo.png)](https://github.com/azu/github-label-setup/issues/1)
 
 - Create starter GitHub labels
-- Migrate exists labels
-- No configuration
+- Migrate existing labels
+- No configuration - It is opinionated
 
 ## Install
 
