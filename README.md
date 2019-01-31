@@ -72,8 +72,9 @@ That is opinionated labels.
 - Type: Documentation
 - Type: Refactoring
 - Type: Maintenance
-    - Related: [Conventional Commits](https://conventionalcommits.org/ "Conventional Commits")
-- Type: Question"
+    - Type is related with [Conventional Commits](https://conventionalcommits.org/ "Conventional Commits")'s type
+- Type: Question
+
 
 
 ## Related
