@@ -110,17 +110,25 @@
   },
   {
     "name": "Type: Refactoring",
-    "color": "fbca04"
+    "color": "fbca04",
+    "aliases": [
+      "refactor"
+    ]
+  },
+  {
+    "name": "Type: Testing",
+    "color": "2e8011",
+    "aliases": [
+      "test",
+      "testing"
+    ]
   },
   {
     "name": "Type: Maintenance",
     "color": "0e8a16",
     "aliases": [
       "greenkeeper",
-      "maintenance",
-      "refactor",
-      "testing",
-      "test"
+      "maintenance"
     ]
   },
   {
