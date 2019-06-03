@@ -64,7 +64,7 @@ That is opinionated labels.
 - Status: Blocked
 - Status: In Progress
 - Status: Proposal
-- Status: Ready for PR
+- Status: PR Welcome
 - Status: Review Needed
 - Type: Breaking Change
 - Type: Bug
