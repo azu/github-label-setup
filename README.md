@@ -60,7 +60,7 @@ That is opinionated labels.
 - ![#ee0701](https://placehold.it/15/ee0701/000000?text=+) Status: Blocked - Progress on the issue is Blocked
 - ![#cccccc](https://placehold.it/15/cccccc/000000?text=+) Status: In Progress - Work in Progress
 - ![#d4c5f9](https://placehold.it/15/d4c5f9/000000?text=+) Status: Proposal - Request for comments
-- ![#c2e0c6](https://placehold.it/15/c2e0c6/000000?text=+) Status: PR Welcome - Welcome to Pull Request
+- ![#2EBE46](https://placehold.it/15/2EBE46/000000?text=+) Status: PR Welcome - Welcome to Pull Request
 - ![#fbca04](https://placehold.it/15/fbca04/000000?text=+) Status: Review Needed - Request for review comments
 - ![#F9C90A](https://placehold.it/15/F9C90A/000000?text=+) Status: Need More Info - Lacks enough info to make progress
 - ![#b60205](https://placehold.it/15/b60205/000000?text=+) Type: Breaking Change - Includes breaking changes
