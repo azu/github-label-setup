@@ -136,7 +136,7 @@
   },
   {
     "name": "Type: Testing",
-    "color": "2e8011",
+    "color": "259959",
     "description": "Adding missing tests or correcting existing tests",
     "aliases": [
       "test",
@@ -144,21 +144,22 @@
     ]
   },
   {
-    "name": "Type: CI",
-    "color": "fbfcb0",
-    "description": "Changes to CI configuration files and scripts",
-    "aliases": [
-      "test",
-      "testing"
-    ]
-  },
-  {
     "name": "Type: Maintenance",
-    "color": "0e8a16",
-    "description": "Changes to our CI, Packa",
+    "color": "abd406",
+    "description": "Repository Maintenance",
     "aliases": [
       "greenkeeper",
       "maintenance"
+    ]
+  },
+  {
+    "name": "Type: CI",
+    "color": "ffd412",
+    "description": "Changes to CI configuration files and scripts",
+    "aliases": [
+      "travis",
+      "ci",
+      "circleci"
     ]
   },
   {

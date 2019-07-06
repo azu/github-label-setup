@@ -68,9 +68,9 @@ That is opinionated labels.
 - ![#5319e7](https://placehold.it/15/5319e7/000000?text=+) Type: Documentation - Documentation only changes
 - ![#1d76db](https://placehold.it/15/1d76db/000000?text=+) Type: Feature - New Feature
 - ![#fbca04](https://placehold.it/15/fbca04/000000?text=+) Type: Refactoring - A code change that neither fixes a bug nor adds a feature
-- ![#2e8011](https://placehold.it/15/2e8011/000000?text=+) Type: Testing - Adding missing tests or correcting existing tests
-- ![#fbfcb0](https://placehold.it/15/fbfcb0/000000?text=+) Type: CI - Changes to CI configuration files and scripts
-- ![#0e8a16](https://placehold.it/15/0e8a16/000000?text=+) Type: Maintenance - Changes to our CI, Packa
+- ![#259959](https://placehold.it/15/259959/000000?text=+) Type: Testing - Adding missing tests or correcting existing tests
+- ![#abd406](https://placehold.it/15/abd406/000000?text=+) Type: Maintenance - Changes to our CI, Packa
+- ![#ffd412](https://placehold.it/15/ffd412/000000?text=+) Type: CI - Changes to CI configuration files and scripts
 - ![#cc317c](https://placehold.it/15/cc317c/000000?text=+) Type: Question - Further information is requested
 
 ## Related
