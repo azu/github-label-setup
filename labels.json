@@ -32,12 +32,12 @@
     "color": "d93f0b"
   },
   {
-    "name": "Priority: Low",
-    "color": "0e8a16"
-  },
-  {
     "name": "Priority: Medium",
     "color": "fbca04"
+  },
+  {
+    "name": "Priority: Low",
+    "color": "0e8a16"
   },
   {
     "name": "Status: Abandoned",
@@ -75,7 +75,7 @@
   },
   {
     "name": "Status: PR Welcome",
-    "color": "2EBE46",
+    "color": "2E7733",
     "description": "Welcome to Pull Request",
     "aliases": [
       "Patch Welcome",
@@ -136,7 +136,7 @@
   },
   {
     "name": "Type: Testing",
-    "color": "259959",
+    "color": "257759",
     "description": "Adding missing tests or correcting existing tests",
     "aliases": [
       "test",
