@@ -16,7 +16,7 @@ Install with [npm](https://www.npmjs.com/):
 
 ## Usage
 
-This tool work without no configuration.
+This tool works without any configuration.
 
     Usage
       $ github-label-setup --token xxx
@@ -31,7 +31,7 @@ This tool work without no configuration.
 You'll also need a GitHub access token ready so that the the tool will have access to your repositories.
 You can [generate an access token here](https://github.com/settings/tokens), be sure to allow the `"repo"` scope.
 
-This tool is wrapper of `github-label-sync`.
+This tool is a wrapper of `github-label-sync`.
 
 - [Financial-Times/github-label-sync: Synchronise your GitHub labels with as few destructive operations as possible](https://github.com/Financial-Times/github-label-sync "Financial-Times/github-label-sync: Synchronise your GitHub labels with as few destructive operations as possible")
 
@@ -45,7 +45,7 @@ See [Label JSON](https://github.com/Financial-Times/github-label-sync#label-json
 
 ## Default Labels
 
-That is opinionated labels. 
+These are opinionated labels.
 
 [![demo](./img/demo.png)](https://github.com/azu/github-label-setup/issues/1)
 - ![#ededed](https://placehold.it/15/ededed/000000?text=+) duplicate - This issue or Pull Request already exists
@@ -55,7 +55,7 @@ That is opinionated labels.
 - ![#d93f0b](https://placehold.it/15/d93f0b/000000?text=+) Priority: High
 - ![#fbca04](https://placehold.it/15/fbca04/000000?text=+) Priority: Medium
 - ![#0e8a16](https://placehold.it/15/0e8a16/000000?text=+) Priority: Low
-- ![#000000](https://placehold.it/15/000000/000000?text=+) Status: Abandoned - The issue or Pull Request is wontfix
+- ![#000000](https://placehold.it/15/000000/000000?text=+) Status: Abandoned - The issue or Pull Request won't be fixed
 - ![#ee0701](https://placehold.it/15/ee0701/000000?text=+) Status: Blocked - Progress on the issue is Blocked
 - ![#cccccc](https://placehold.it/15/cccccc/000000?text=+) Status: In Progress - Work in Progress
 - ![#d4c5f9](https://placehold.it/15/d4c5f9/000000?text=+) Status: Proposal - Request for comments
