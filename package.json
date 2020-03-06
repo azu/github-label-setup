@@ -11,7 +11,7 @@
     "labels.json"
   ],
   "name": "@azu/github-label-setup",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "GitHub label setup script.",
   "main": "lib/github-label-setup.js",
   "bin": {
