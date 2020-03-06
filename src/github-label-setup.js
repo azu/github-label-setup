@@ -51,9 +51,9 @@ module.exports = function({
     const repoPromise = repo ? Promise.resolve(repo) : getRepositoryInfo();
     return repoPromise.then(repoPath => {
         assert(repoPath, "repo should be needed.");
-        const labelFilePath = tryResolve(labels);
+        const labelFilePath = tryResolve(labels) || tryResolve(path.resolve(process.cwd(), labels));
         if (!labelFilePath) {
-            throw new Error(`Not found label: ${labels}`);
+            throw new Error(`Not found label file: ${labels}`);
         }
         const labelJSON = require(labelFilePath);
         return githubLabelSync({
