@@ -40,8 +40,8 @@
     "babel-preset-jsdoc-to-assert": "^5.0.0",
     "babel-preset-power-assert": "^1.0.0",
     "babel-register": "^6.26.0",
-    "cross-env": "^5.2.0",
-    "mocha": "^6.1.4",
+    "cross-env": "^7.0.2",
+    "mocha": "^8.0.1",
     "power-assert": "^1.4.4"
   },
   "dependencies": {
