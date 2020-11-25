@@ -1,55 +1,56 @@
 {
+  "name": "@azu/github-label-setup",
+  "version": "3.0.2",
+  "description": "GitHub label setup script.",
+  "keywords": [
+    "github",
+    "label"
+  ],
+  "homepage": "https://github.com/azu/github-label-setup",
+  "bugs": {
+    "url": "https://github.com/azu/github-label-setup/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azu/github-label-setup.git"
+  },
+  "license": "MIT",
+  "author": "azu",
+  "main": "lib/github-label-setup.js",
+  "types": "lib/github-label-setup.d.ts",
+  "bin": {
+    "github-label-setup": "./bin/cmd.js"
+  },
   "directories": {
     "test": "test"
   },
-  "author": "azu",
-  "license": "MIT",
   "files": [
     "bin/",
     "lib/",
     "src/",
     "labels.json"
   ],
-  "name": "@azu/github-label-setup",
-  "version": "3.0.2",
-  "description": "GitHub label setup script.",
-  "main": "lib/github-label-setup.js",
-  "bin": {
-    "github-label-setup": "./bin/cmd.js"
-  },
   "scripts": {
-    "build": "cross-env NODE_ENV=production babel src --out-dir lib --source-maps",
-    "watch": "babel src --out-dir lib --watch --source-maps",
-    "prepublish": "npm run --if-present build"
-  },
-  "keywords": [
-    "github",
-    "label"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/azu/github-label-setup.git"
-  },
-  "bugs": {
-    "url": "https://github.com/azu/github-label-setup/issues"
-  },
-  "homepage": "https://github.com/azu/github-label-setup",
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-jsdoc-to-assert": "^5.0.0",
-    "babel-preset-power-assert": "^1.0.0",
-    "babel-register": "^6.26.0",
-    "cross-env": "^7.0.2",
-    "mocha": "^8.0.1",
-    "power-assert": "^1.4.4"
+    "build": "tsc -p .",
+    "prepublishOnly": "npm run build",
+    "prepublish": "npm run --if-present build",
+    "watch": "tsc -p . --watch"
   },
   "dependencies": {
-    "chalk": "^2.3.0",
-    "git-remote-origin-url": "^3.0.0",
-    "github-label-sync": "^1.4.1",
-    "hosted-git-info": "^2.5.0",
-    "meow": "^5.0.0",
+    "git-remote-origin-url": "^3.1.0",
+    "github-label-sync": "^2.0.0",
+    "hosted-git-info": "^3.0.7",
+    "meow": "^8.0.0",
     "try-resolve": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/github-label-sync": "^2.0.0",
+    "@types/hosted-git-info": "^3.0.1",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^14.14.10",
+    "mocha": "^8.2.1",
+    "ts-node": "^9.0.0",
+    "ts-node-test-register": "^9.0.0",
+    "typescript": "^4.1.2"
   }
 }
