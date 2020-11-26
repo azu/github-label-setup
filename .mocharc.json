@@ -1,1 +1,5 @@
-{}
+{
+    "require": [
+        "ts-node-test-register"
+    ]
+}
