@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 const meow = require("meow");
-const setup = require("../lib/github-label-setup");
+const { setupLabels } = require("../lib/github-label-setup");
 
 const cli = meow(`
     Usage
@@ -40,7 +40,7 @@ const cli = meow(`
  }
  */
 
-setup(cli.flags).catch(function(error){
+setupLabels(cli.flags).catch(function(error){
     console.error(error);
     cli.showHelp();
 });

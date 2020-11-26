@@ -28,7 +28,7 @@ const getRepositoryInfo = () => {
  * @param allowAddedLabels
  * @returns {Promise}
  */
-module.exports = function ({
+export function setupLabels({
                                token,
                                repo,
                                labels = path.join(__dirname, "..", "labels.json"),
@@ -62,4 +62,4 @@ module.exports = function ({
             log: console,
         });
     });
-};
+}
