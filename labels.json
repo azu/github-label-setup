@@ -111,7 +111,7 @@
   },
   {
     "name": "Type: Documentation",
-    "color": "5319e7",
+    "color": "0e8a16",
     "description": "Documentation only changes",
     "aliases": [
       "documents",
@@ -168,6 +168,14 @@
     "description": "Further information is requested",
     "aliases": [
       "question"
+    ]
+  },
+  {
+    "name": "Type: Security",
+    "color": "ee0701",
+    "description": "Vulnerability disclosure or Fixing security issue",
+    "aliases": [
+      "security"
     ]
   }
 ]
