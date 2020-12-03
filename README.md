@@ -23,10 +23,12 @@ This tool works without any configuration.
 
     Options
 
-      -h, --help                  output usage information
-      -l, --labels <path>         the path or npm packages name to look for the label configuration in. Default: labels.json
-      --token <token>  a GitHub access token (also settable with a GITHUB_ACCESS_TOKEN environment variable)
-      -d, --dry-run               calculate the required label changes but do not apply them
+      -h, --help                  [Boolean] output usage information
+      -l, --labels <path>         [Path:String] the path to look for the label configuration in. Default: labels.json
+      --token <token>             [String] a GitHub access token (also settable with a GITHUB_ACCESS_TOKEN environment variable)
+      -d, --dry-run               [Boolean] calculate the required label changes but do not apply them
+      -A, --allow-added-labels    [Boolean] allow additional labels in the repo, and don't delete them
+
 
 You'll also need a GitHub access token ready so that the the tool will have access to your repositories.
 You can [generate an access token here](https://github.com/settings/tokens), be sure to allow the `"repo"` scope.
