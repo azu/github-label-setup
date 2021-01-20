@@ -12,7 +12,7 @@ Opinionated GitHub label setup tool.
 
 Install with [npm](https://www.npmjs.com/):
 
-    npm install @azu/github-label-setup -g
+    npm install --global @azu/github-label-setup
 
 ## Usage
 
