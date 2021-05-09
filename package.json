@@ -39,18 +39,18 @@
   "dependencies": {
     "git-remote-origin-url": "^3.1.0",
     "github-label-sync": "^2.0.0",
-    "hosted-git-info": "^3.0.7",
+    "hosted-git-info": "^4.0.2",
     "meow": "^8.0.0",
     "try-resolve": "^1.0.1"
   },
   "devDependencies": {
     "@types/github-label-sync": "^2.0.0",
     "@types/hosted-git-info": "^3.0.1",
-    "@types/mocha": "^8.0.4",
-    "@types/node": "^14.14.10",
-    "mocha": "^8.2.1",
-    "ts-node": "^9.0.0",
-    "ts-node-test-register": "^9.0.0",
-    "typescript": "^4.1.2"
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^15.0.2",
+    "mocha": "^8.4.0",
+    "ts-node": "^9.1.1",
+    "ts-node-test-register": "^9.0.1",
+    "typescript": "^4.2.4"
   }
 }
