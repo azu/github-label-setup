@@ -54,10 +54,10 @@ These are opinionated labels.
 - ![#ededed](https://via.placeholder.com/15/ededed/000000?text=+) duplicate - This issue or Pull Request already exists
 - ![#e99695](https://via.placeholder.com/15/e99695/000000?text=+) help wanted - Extra attention is needed
 - ![#7057ff](https://via.placeholder.com/15/7057ff/000000?text=+) good first issue - Good for newcomers
-- ![#ee0701](https://via.placeholder.com/15/ee0701/000000?text=+) Priority: Critical 
-- ![#d93f0b](https://via.placeholder.com/15/d93f0b/000000?text=+) Priority: High 
-- ![#fbca04](https://via.placeholder.com/15/fbca04/000000?text=+) Priority: Medium 
-- ![#0e8a16](https://via.placeholder.com/15/0e8a16/000000?text=+) Priority: Low 
+- ![#ee0701](https://via.placeholder.com/15/ee0701/000000?text=+) Priority: Critical
+- ![#d93f0b](https://via.placeholder.com/15/d93f0b/000000?text=+) Priority: High
+- ![#fbca04](https://via.placeholder.com/15/fbca04/000000?text=+) Priority: Medium
+- ![#0e8a16](https://via.placeholder.com/15/0e8a16/000000?text=+) Priority: Low
 - ![#000000](https://via.placeholder.com/15/000000/000000?text=+) Status: Abandoned - The issue or Pull Request is wontfix
 - ![#ee0701](https://via.placeholder.com/15/ee0701/000000?text=+) Status: Blocked - Progress on the issue is Blocked
 - ![#cccccc](https://via.placeholder.com/15/cccccc/000000?text=+) Status: In Progress - Work in Progress
@@ -75,6 +75,8 @@ These are opinionated labels.
 - ![#ffd412](https://via.placeholder.com/15/ffd412/000000?text=+) Type: CI - Changes to CI configuration files and scripts
 - ![#cc317c](https://via.placeholder.com/15/cc317c/000000?text=+) Type: Question - Further information is requested
 - ![#ee0701](https://via.placeholder.com/15/ee0701/000000?text=+) Type: Security - Vulnerability disclosure or Fixing security issue
+- ![#0366d6](https://via.placeholder.com/15/0366d6/000000?text=+) Type: Dependencies - Dependency issues or Changes to dependency files
+
 
 ## Related
 

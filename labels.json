@@ -177,5 +177,13 @@
     "aliases": [
       "security"
     ]
+  },
+  {
+    "name": "Type: Dependencies",
+    "color": "0366d6",
+    "description": "Dependency issues or Changes to dependency files",
+    "aliases": [
+      "dependencies"
+    ]
   }
 ]
