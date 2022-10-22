@@ -77,7 +77,6 @@ These are opinionated labels.
 - ![#ee0701](https://via.placeholder.com/15/ee0701/000000?text=+) Type: Security - Vulnerability disclosure or Fixing security issue
 - ![#0366d6](https://via.placeholder.com/15/0366d6/000000?text=+) Type: Dependencies - Dependency issues or Changes to dependency files
 
-
 ## Related
 
 - [Conventional Commits](https://conventionalcommits.org/ "Conventional Commits")
