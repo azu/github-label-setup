@@ -1,6 +1,6 @@
 {
   "name": "@azu/github-label-setup",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "GitHub label setup script.",
   "type": "module",
   "keywords": [
