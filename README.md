@@ -64,32 +64,32 @@ These are opinionated labels.
 
 [![demo](./img/demo.png)](https://github.com/azu/github-label-setup/issues/1)
 
-- ![#ededed](https://via.placeholder.com/15/ededed/000000?text=+) duplicate - This issue or Pull Request already exists
-- ![#e99695](https://via.placeholder.com/15/e99695/000000?text=+) help wanted - Extra attention is needed
-- ![#7057ff](https://via.placeholder.com/15/7057ff/000000?text=+) good first issue - Good for newcomers
-- ![#ee0701](https://via.placeholder.com/15/ee0701/000000?text=+) Priority: Critical
-- ![#d93f0b](https://via.placeholder.com/15/d93f0b/000000?text=+) Priority: High
-- ![#fbca04](https://via.placeholder.com/15/fbca04/000000?text=+) Priority: Medium
-- ![#0e8a16](https://via.placeholder.com/15/0e8a16/000000?text=+) Priority: Low
-- ![#000000](https://via.placeholder.com/15/000000/000000?text=+) Status: Abandoned - The issue or Pull Request is wontfix
-- ![#ee0701](https://via.placeholder.com/15/ee0701/000000?text=+) Status: Blocked - Progress on the issue is Blocked
-- ![#cccccc](https://via.placeholder.com/15/cccccc/000000?text=+) Status: In Progress - Work in Progress
-- ![#d4c5f9](https://via.placeholder.com/15/d4c5f9/000000?text=+) Status: Proposal - Request for comments
-- ![#2E7733](https://via.placeholder.com/15/2E7733/000000?text=+) Status: PR Welcome - Welcome to Pull Request
-- ![#fbca04](https://via.placeholder.com/15/fbca04/000000?text=+) Status: Review Needed - Request for review comments
-- ![#F9C90A](https://via.placeholder.com/15/F9C90A/000000?text=+) Status: Need More Info - Lacks enough info to make progress
-- ![#b60205](https://via.placeholder.com/15/b60205/000000?text=+) Type: Breaking Change - Includes breaking changes
-- ![#ee0701](https://via.placeholder.com/15/ee0701/000000?text=+) Type: Bug - Bug or Bug fixes
-- ![#0e8a16](https://via.placeholder.com/15/0e8a16/000000?text=+) Type: Documentation - Documentation only changes
-- ![#1d76db](https://via.placeholder.com/15/1d76db/000000?text=+) Type: Feature - New Feature
-- ![#fbca04](https://via.placeholder.com/15/fbca04/000000?text=+) Type: Refactoring - A code change that neither fixes a bug nor adds a feature
-- ![#257759](https://via.placeholder.com/15/257759/000000?text=+) Type: Testing - Adding missing tests or correcting existing tests
-- ![#abd406](https://via.placeholder.com/15/abd406/000000?text=+) Type: Maintenance - Repository Maintenance
-- ![#ffd412](https://via.placeholder.com/15/ffd412/000000?text=+) Type: CI - Changes to CI configuration files and scripts
-- ![#cc317c](https://via.placeholder.com/15/cc317c/000000?text=+) Type: Question - Further information is requested
-- ![#ee0701](https://via.placeholder.com/15/ee0701/000000?text=+) Type: Security - Vulnerability disclosure or Fixing security issue
-- ![#0366d6](https://via.placeholder.com/15/0366d6/000000?text=+) Type: Dependencies - Dependency issues or Changes to dependency files
-- ![#0366d6](https://via.placeholder.com/15/BFD4F2/000000?text=+) Type: Meta - Related repository itself
+- ![#ededed](https://placehold.co/15x15/ededed/ededed.png) duplicate - This issue or Pull Request already exists
+- ![#e99695](https://placehold.co/15x15/e99695/e99695.png) help wanted - Extra attention is needed
+- ![#7057ff](https://placehold.co/15x15/7057ff/7057ff.png) good first issue - Good for newcomers
+- ![#ee0701](https://placehold.co/15x15/ee0701/ee0701.png) Priority: Critical
+- ![#d93f0b](https://placehold.co/15x15/d93f0b/d93f0b.png) Priority: High
+- ![#fbca04](https://placehold.co/15x15/fbca04/fbca04.png) Priority: Medium
+- ![#0e8a16](https://placehold.co/15x15/0e8a16/0e8a16.png) Priority: Low
+- ![#000000](https://placehold.co/15x15/000000/000000.png) Status: Abandoned - The issue or Pull Request is wontfix
+- ![#ee0701](https://placehold.co/15x15/ee0701/ee0701.png) Status: Blocked - Progress on the issue is Blocked
+- ![#cccccc](https://placehold.co/15x15/cccccc/cccccc.png) Status: In Progress - Work in Progress
+- ![#d4c5f9](https://placehold.co/15x15/d4c5f9/d4c5f9.png) Status: Proposal - Request for comments
+- ![#2E7733](https://placehold.co/15x15/2E7733/2E7733.png) Status: PR Welcome - Welcome to Pull Request
+- ![#fbca04](https://placehold.co/15x15/fbca04/fbca04.png) Status: Review Needed - Request for review comments
+- ![#F9C90A](https://placehold.co/15x15/F9C90A/F9C90A.png) Status: Need More Info - Lacks enough info to make progress
+- ![#b60205](https://placehold.co/15x15/b60205/b60205.png) Type: Breaking Change - Includes breaking changes
+- ![#ee0701](https://placehold.co/15x15/ee0701/ee0701.png) Type: Bug - Bug or Bug fixes
+- ![#0e8a16](https://placehold.co/15x15/0e8a16/0e8a16.png) Type: Documentation - Documentation only changes
+- ![#1d76db](https://placehold.co/15x15/1d76db/1d76db.png) Type: Feature - New Feature
+- ![#fbca04](https://placehold.co/15x15/fbca04/fbca04.png) Type: Refactoring - A code change that neither fixes a bug nor adds a feature
+- ![#257759](https://placehold.co/15x15/257759/257759.png) Type: Testing - Adding missing tests or correcting existing tests
+- ![#abd406](https://placehold.co/15x15/abd406/abd406.png) Type: Maintenance - Repository Maintenance
+- ![#ffd412](https://placehold.co/15x15/ffd412/ffd412.png) Type: CI - Changes to CI configuration files and scripts
+- ![#cc317c](https://placehold.co/15x15/cc317c/cc317c.png) Type: Question - Further information is requested
+- ![#ee0701](https://placehold.co/15x15/ee0701/ee0701.png) Type: Security - Vulnerability disclosure or Fixing security issue
+- ![#0366d6](https://placehold.co/15x15/0366d6/0366d6.png) Type: Dependencies - Dependency issues or Changes to dependency files
+- ![#0366d6](https://placehold.co/15x15/BFD4F2/BFD4F2.png) Type: Meta - Related repository itself
 
 ## Integration with GitHub Releases
 
