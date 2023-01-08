@@ -76,7 +76,7 @@ These are opinionated labels.
 - ![#cc317c](https://via.placeholder.com/15/cc317c/000000?text=+) Type: Question - Further information is requested
 - ![#ee0701](https://via.placeholder.com/15/ee0701/000000?text=+) Type: Security - Vulnerability disclosure or Fixing security issue
 - ![#0366d6](https://via.placeholder.com/15/0366d6/000000?text=+) Type: Dependencies - Dependency issues or Changes to dependency files
-
+- ![#0366d6](https://via.placeholder.com/15/BFD4F2/000000?text=+) Type: Meta - Related repository itself
 ## Related
 
 - [Conventional Commits](https://conventionalcommits.org/ "Conventional Commits")
