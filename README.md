@@ -43,8 +43,10 @@ This tool works without any configuration.
         $ github-label-setup --addReleaseYml
 
 
-You'll also need a GitHub access token ready so that the the tool will have access to your repositories.
-You can [generate an access token here](https://github.com/settings/tokens), be sure to allow the `"repo"` scope.
+You will need to get a GitHub Personal Accesses token to update labels of your repository.
+You need to generate [GitHub Personal Accesses token](https://github.com/settings/tokens/new?scopes=repo) with `"repo"` scope.
+
+- Generate Link: <https://github.com/settings/tokens/new?scopes=repo>
 
 This tool is a wrapper of `github-label-sync`.
 
