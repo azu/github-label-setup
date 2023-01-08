@@ -1,10 +1,8 @@
 #!/usr/bin/env node
 'use strict';
 const meow = require("meow");
-const { setupLabels } = require("../lib/github-label-setup");
 const path = require("path");
-const { writeGitHubReleaseYaml } = require("../src/github-release-yml.js");
-
+const { setupLabels ,writeGitHubReleaseYaml } = require("../lib/github-label-setup");
 /*
  {
  input: ['unicorns'],
