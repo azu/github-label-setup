@@ -20,7 +20,7 @@
   "main": "lib/github-label-setup.js",
   "types": "lib/github-label-setup.d.ts",
   "bin": {
-    "github-label-setup": "./bin/cmd.js"
+    "github-label-setup": "./bin/cmd.mjs"
   },
   "directories": {
     "test": "test"
