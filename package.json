@@ -2,6 +2,7 @@
   "name": "@azu/github-label-setup",
   "version": "4.2.1",
   "description": "GitHub label setup script.",
+  "type": "module",
   "keywords": [
     "github",
     "label"
@@ -19,7 +20,7 @@
   "main": "lib/github-label-setup.js",
   "types": "lib/github-label-setup.d.ts",
   "bin": {
-    "github-label-setup": "./bin/cmd.js"
+    "github-label-setup": "./bin/cmd.mjs"
   },
   "directories": {
     "test": "test"
@@ -37,20 +38,20 @@
     "watch": "tsc -p . --watch"
   },
   "dependencies": {
-    "git-remote-origin-url": "^3.1.0",
-    "github-label-sync": "^2.0.0",
-    "hosted-git-info": "^4.0.2",
-    "meow": "^8.0.0",
+    "git-remote-origin-url": "^4.0.0",
+    "github-label-sync": "^2.2.0",
+    "hosted-git-info": "^6.1.1",
+    "meow": "^11.0.0",
     "try-resolve": "^1.0.1"
   },
   "devDependencies": {
-    "@types/github-label-sync": "^2.0.0",
-    "@types/hosted-git-info": "^3.0.1",
-    "@types/mocha": "^8.2.2",
-    "@types/node": "^15.0.2",
-    "mocha": "^8.4.0",
-    "ts-node": "^9.1.1",
-    "ts-node-test-register": "^9.0.1",
-    "typescript": "^4.2.4"
+    "@types/github-label-sync": "^2.0.2",
+    "@types/hosted-git-info": "^3.0.2",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.11.18",
+    "mocha": "^10.2.0",
+    "ts-node": "^10.9.1",
+    "ts-node-test-register": "^10.0.0",
+    "typescript": "^4.9.4"
   }
 }
