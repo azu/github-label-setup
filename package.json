@@ -28,8 +28,7 @@
     "bin/",
     "lib/",
     "src/",
-    "labels.json",
-    ".github/release.yml"
+    "labels.json"
   ],
   "scripts": {
     "build": "tsc -p .",

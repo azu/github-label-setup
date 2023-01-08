@@ -185,13 +185,5 @@
     "aliases": [
       "dependencies"
     ]
-  },
-  {
-    "name": "Type: Meta",
-    "color": "BFD4F2",
-    "description": "Related repository itself",
-    "aliases": [
-      "meta"
-    ]
   }
 ]
