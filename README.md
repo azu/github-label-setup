@@ -18,6 +18,7 @@ Install with [npm](https://www.npmjs.com/):
 
 This tool works without any configuration.
 
+
     Usage
       $ github-label-setup --token xxx
 
@@ -28,7 +29,19 @@ This tool works without any configuration.
       --token <token>             [String] a GitHub access token (also settable with a GITHUB_ACCESS_TOKEN environment variable)
       -d, --dry-run               [Boolean] calculate the required label changes but do not apply them
       -A, --allow-added-labels    [Boolean] allow additional labels in the repo, and don't delete them
+      
+    GitHub Release Options
+      
+      --addReleaseYml             [Boolean] add a .github/release.yml file
+      --addReleaseYmlOutputPath   [Path:String] the path to write the .github/release.yml file to. Default: .github/release.yml
 
+    Examples
+        # Overwrite labels in the current repository
+        $ github-label-setup --token "${GITHUB_TOKEN}"
+        # Add labels to the current repository
+        $ github-label-setup --token "${GITHUB_TOKEN}" --allow-added-labels
+        # Add .github/release.yml to integrate with GitHub Releases
+        $ github-label-setup --addReleaseYml
 
 You'll also need a GitHub access token ready so that the the tool will have access to your repositories.
 You can [generate an access token here](https://github.com/settings/tokens), be sure to allow the `"repo"` scope.
@@ -77,6 +90,21 @@ These are opinionated labels.
 - ![#ee0701](https://via.placeholder.com/15/ee0701/000000?text=+) Type: Security - Vulnerability disclosure or Fixing security issue
 - ![#0366d6](https://via.placeholder.com/15/0366d6/000000?text=+) Type: Dependencies - Dependency issues or Changes to dependency files
 - ![#0366d6](https://via.placeholder.com/15/BFD4F2/000000?text=+) Type: Meta - Related repository itself
+
+## Integration with GitHub Releases
+
+GitHub Releases support automatically generate release notes using labels.
+`--addReleaseYml` option will add `.github/release.yml` file to your repository.
+
+```bash
+# Add .github/release.yml to integrate with GitHub Releases
+$ github-label-setup --addReleaseYml
+```
+
+For more details, see GitHub Releases document.
+
+- [Configuring automatically generated release notes](https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes#configuring-automatically-generated-release-notes)
+
 ## Related
 
 - [Conventional Commits](https://conventionalcommits.org/ "Conventional Commits")

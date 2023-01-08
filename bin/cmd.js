@@ -5,6 +5,13 @@ const { setupLabels } = require("../lib/github-label-setup");
 const path = require("path");
 const { writeGitHubReleaseYaml } = require("../src/github-release-yml.js");
 
+/*
+ {
+ input: ['unicorns'],
+ flags: {rainbow: true},
+ ...
+ }
+ */
 const cli = meow(`
     Usage
       $ github-label-setup --token xxx
@@ -21,6 +28,14 @@ const cli = meow(`
       
       --addReleaseYml             [Boolean] add a .github/release.yml file
       --addReleaseYmlOutputPath   [Path:String] the path to write the .github/release.yml file to. Default: .github/release.yml
+
+    Examples
+        # Overwrite labels in the current repository
+        $ github-label-setup --token "${GITHUB_TOKEN}"
+        # Add labels to the current repository
+        $ github-label-setup --token "${GITHUB_TOKEN}" --allow-added-labels
+        # Add .github/release.yml to integrate with GitHub Releases
+        $ github-label-setup --addReleaseYml
 
 `, {
     
@@ -47,13 +62,6 @@ const cli = meow(`
         }
     }
 });
-/*
- {
- input: ['unicorns'],
- flags: {rainbow: true},
- ...
- }
- */
 
 if (cli.flags.addReleaseYml) {
     const outputPath = cli.flags.addReleaseYmlOutputPath;
