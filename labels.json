@@ -185,5 +185,21 @@
     "aliases": [
       "dependencies"
     ]
+  },
+  {
+    "name": "Type: Meta",
+    "color": "BFD4F2",
+    "description": "Type: Meta - Related to repository itself",
+    "aliases": [
+      "meta"
+    ]
+  },
+  {
+    "name": "Type: Release",
+    "color": "5319E7",
+    "description": "Related to release process",
+    "aliases": [
+      "meta"
+    ]
   }
 ]
