@@ -3,6 +3,7 @@ changelog:
     labels:
       - 'Type: Meta'
       - 'Type: Question'
+      - 'Type: Release'
 
   categories:
     - title: Security Fixes
