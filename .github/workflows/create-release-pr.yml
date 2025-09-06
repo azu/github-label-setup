@@ -20,7 +20,12 @@ jobs:
       pull-requests: write
     steps:
       - name: Checkout
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+        with:
+          persist-credentials: false
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
         with:
           persist-credentials: false
       
@@ -34,11 +39,11 @@ jobs:
         with:
           node-version: 'lts/*'
       
-      # No need to install dependencies - npm version works without them
+      # No need to install dependencies - pnpm version works without them
       - name: Version bump
         id: version
         run: |
-          npm version "$VERSION_TYPE" --no-git-tag-version
+          pnpm version "$VERSION_TYPE" --no-git-tag-version
           VERSION=$(jq -r '.version' package.json)
           echo "version=$VERSION" >> $GITHUB_OUTPUT
         env:
@@ -97,7 +102,7 @@ jobs:
           commit-message: "chore: release v${{ steps.version.outputs.version }}"
           add-paths: |
             package.json
-            yarn.lock
+            pnpm.lock
           labels: |
             Type: Release
           assignees: ${{ github.actor }}
