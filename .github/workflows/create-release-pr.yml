@@ -20,12 +20,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Checkout
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
-        with:
-          persist-credentials: false
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
           persist-credentials: false
       
@@ -34,16 +29,19 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
       
+      - name: Install pnpm
+        uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
+      
       - name: Setup Node.js
         uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
         with:
           node-version: 'lts/*'
       
-      # No need to install dependencies - pnpm version works without them
+      # No need to install dependencies - npm version works without them
       - name: Version bump
         id: version
         run: |
-          pnpm version "$VERSION_TYPE" --no-git-tag-version
+          npm version "$VERSION_TYPE" --no-git-tag-version
           VERSION=$(jq -r '.version' package.json)
           echo "version=$VERSION" >> $GITHUB_OUTPUT
         env:
@@ -67,7 +65,7 @@ jobs:
           
           # Generate release notes with or without previous tag
           if [ -n "$LAST_TAG" ]; then
-            NOTES=$(gh api \
+            RELEASE_NOTES=$(gh api \
               --method POST \
               -H "Accept: application/vnd.github+json" \
               "/repos/$GITHUB_REPOSITORY/releases/generate-notes" \
@@ -76,7 +74,7 @@ jobs:
               -f "previous_tag_name=$LAST_TAG" \
               --jq '.body')
           else
-            NOTES=$(gh api \
+            RELEASE_NOTES=$(gh api \
               --method POST \
               -H "Accept: application/vnd.github+json" \
               "/repos/$GITHUB_REPOSITORY/releases/generate-notes" \
@@ -85,8 +83,10 @@ jobs:
               --jq '.body')
           fi
           
-          # Save to file to handle multiline content
-          echo "$NOTES" > release-notes.md
+          # Set release notes as environment variable for PR body
+          echo "RELEASE_NOTES<<EOF" >> $GITHUB_ENV
+          echo "$RELEASE_NOTES" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
         env:
           GH_TOKEN: ${{ github.token }}
           VERSION: ${{ steps.version.outputs.version }}
@@ -98,11 +98,9 @@ jobs:
           branch: release/v${{ steps.version.outputs.version }}
           delete-branch: true
           title: "Release v${{ steps.version.outputs.version }}"
-          body-path: release-notes.md
+          body: |
+            ${{ env.RELEASE_NOTES }}
           commit-message: "chore: release v${{ steps.version.outputs.version }}"
-          add-paths: |
-            package.json
-            pnpm.lock
           labels: |
             Type: Release
           assignees: ${{ github.actor }}
