@@ -28,7 +28,12 @@ jobs:
       pull-requests: write  # PR comment
     steps:
       - name: Checkout
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+        with:
+          persist-credentials: false
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
         with:
           persist-credentials: false
       
@@ -65,28 +70,19 @@ jobs:
           node-version: 'lts/*'
           registry-url: 'https://registry.npmjs.org'
       
-      - name: Ensure npm 11.5.1 or later is installed
-        if: steps.tag-check.outputs.exists == 'false'
-        run: |
-          NPM_VERSION=$(npm -v)
-          echo "Current npm version: $NPM_VERSION"
-          if ! npx semver -r ">=11.5.1" "$NPM_VERSION"; then
-            echo "npm version $NPM_VERSION is too old. Installing latest npm..."
-            npm install -g npm@latest
-            echo "Updated npm version: $(npm -v)"
-          fi
+      # pnpm is already installed via pnpm/action-setup
       
       - name: Install dependencies
         if: steps.tag-check.outputs.exists == 'false'
-        run: yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
       
       - name: Build package
         if: steps.tag-check.outputs.exists == 'false'
-        run: yarn run build
+        run: pnpm run build
       
       - name: Publish to npm with provenance
         if: steps.tag-check.outputs.exists == 'false'
-        run: npm publish --provenance --access public
+        run: pnpm publish --provenance --access public
       
       - name: Create GitHub Release with tag
         id: create-release
