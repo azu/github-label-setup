@@ -1,0 +1,104 @@
+name: Create Release PR
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version type'
+        required: true
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+
+jobs:
+  create-release-pr:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          persist-credentials: false
+      
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: 'lts/*'
+      
+      # No need to install dependencies - npm version works without them
+      - name: Version bump
+        id: version
+        run: |
+          npm version "$VERSION_TYPE" --no-git-tag-version
+          VERSION=$(jq -r '.version' package.json)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+        env:
+          VERSION_TYPE: ${{ github.event.inputs.version }}
+      
+      - name: Get release notes
+        id: release-notes
+        run: |
+          # Get the default branch
+          DEFAULT_BRANCH=$(gh api "repos/$GITHUB_REPOSITORY" --jq '.default_branch')
+          
+          # Get the last release tag using GitHub API
+          LAST_TAG=$(gh api "repos/$GITHUB_REPOSITORY/releases/latest" --jq '.tag_name' 2>/dev/null || echo "")
+          
+          # Log the tag status
+          if [ -z "$LAST_TAG" ]; then
+            echo "No previous releases found, generating notes from beginning"
+          else
+            echo "Previous release: $LAST_TAG"
+          fi
+          
+          # Generate release notes with or without previous tag
+          if [ -n "$LAST_TAG" ]; then
+            NOTES=$(gh api \
+              --method POST \
+              -H "Accept: application/vnd.github+json" \
+              "/repos/$GITHUB_REPOSITORY/releases/generate-notes" \
+              -f "tag_name=v$VERSION" \
+              -f "target_commitish=$DEFAULT_BRANCH" \
+              -f "previous_tag_name=$LAST_TAG" \
+              --jq '.body')
+          else
+            NOTES=$(gh api \
+              --method POST \
+              -H "Accept: application/vnd.github+json" \
+              "/repos/$GITHUB_REPOSITORY/releases/generate-notes" \
+              -f "tag_name=v$VERSION" \
+              -f "target_commitish=$DEFAULT_BRANCH" \
+              --jq '.body')
+          fi
+          
+          # Save to file to handle multiline content
+          echo "$NOTES" > release-notes.md
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.version.outputs.version }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
+        with:
+          branch: release/v${{ steps.version.outputs.version }}
+          delete-branch: true
+          title: "Release v${{ steps.version.outputs.version }}"
+          body-path: release-notes.md
+          commit-message: "chore: release v${{ steps.version.outputs.version }}"
+          add-paths: |
+            package.json
+            yarn.lock
+          labels: |
+            Type: Release
+          assignees: ${{ github.actor }}
+          draft: true
