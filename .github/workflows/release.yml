@@ -70,16 +70,7 @@ jobs:
           node-version: 'lts/*'
           registry-url: 'https://registry.npmjs.org'
       
-      - name: Ensure pnpm 11.5.1 or later is installed
-        if: steps.tag-check.outputs.exists == 'false'
-        run: |
-          NPM_VERSION=$(pnpm -v)
-          echo "Current pnpm version: $NPM_VERSION"
-          if ! npx semver -r ">=11.5.1" "$NPM_VERSION"; then
-            echo "pnpm version $NPM_VERSION is too old. Installing latest pnpm..."
-            pnpm install -g pnpm@latest
-            echo "Updated pnpm version: $(pnpm -v)"
-          fi
+      # pnpm is already installed via pnpm/action-setup
       
       - name: Install dependencies
         if: steps.tag-check.outputs.exists == 'false'
@@ -89,7 +80,7 @@ jobs:
         if: steps.tag-check.outputs.exists == 'false'
         run: pnpm run build
       
-      - name: Publish to pnpm with provenance
+      - name: Publish to npm with provenance
         if: steps.tag-check.outputs.exists == 'false'
         run: pnpm publish --provenance --access public
       
@@ -126,7 +117,7 @@ jobs:
           gh pr comment "$PR_NUMBER" \
             --body "✅ **Release v$VERSION completed successfully!**
           
-          - 📦 pnpm package: https://www.npmjs.com/package/$PACKAGE_NAME/v/$VERSION
+          - 📦 npm package: https://www.npmjs.com/package/$PACKAGE_NAME/v/$VERSION
           - 🏷️ GitHub Release: $RELEASE_URL
           - 🔗 Workflow run: $SERVER_URL/$REPOSITORY/actions/runs/$RUN_ID"
         env:
