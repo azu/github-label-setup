@@ -2,13 +2,15 @@
   "compilerOptions": {
     /* Basic Options */
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "esModuleInterop": true,
     "newLine": "LF",
+    "rootDir": "./src/",
     "outDir": "./lib/",
     "target": "ES2018",
     "sourceMap": true,
     "declaration": true,
+    "types": ["node"],
     "jsx": "preserve",
     "lib": [
       "esnext",
