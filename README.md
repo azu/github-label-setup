@@ -90,6 +90,7 @@ These are opinionated labels.
 - ![#ffd412](https://placehold.co/15x15/ffd412/ffd412.png) Type: CI - Changes to CI configuration files and scripts
 - ![#cc317c](https://placehold.co/15x15/cc317c/cc317c.png) Type: Question - Further information is requested
 - ![#ee0701](https://placehold.co/15x15/ee0701/ee0701.png) Type: Security - Vulnerability disclosure or Fixing security issue
+- ![#de52a8](https://placehold.co/15x15/de52a8/de52a8.png) Type: Accessibility - Barrier affecting people with disabilities
 - ![#0366d6](https://placehold.co/15x15/0366d6/0366d6.png) Type: Dependencies - Dependency issues or Changes to dependency files
 - ![#0366d6](https://placehold.co/15x15/BFD4F2/BFD4F2.png) Type: Meta - Related to repository itself (This will not be includes in Release Note)
 - ![#0366d6](https://placehold.co/15x15/5319E7/5319E7.png) Type: Release - Related to release process (This will not be includes in Release Note)
