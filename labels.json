@@ -114,6 +114,7 @@
     "color": "0e8a16",
     "description": "Documentation only changes",
     "aliases": [
+      "documentation",
       "documents",
       "document"
     ]
@@ -176,6 +177,15 @@
     "description": "Vulnerability disclosure or Fixing security issue",
     "aliases": [
       "security"
+    ]
+  },
+  {
+    "name": "Type: Accessibility",
+    "color": "de52a8",
+    "description": "Barrier affecting people with disabilities",
+    "aliases": [
+      "accessibility",
+      "a11y"
     ]
   },
   {
