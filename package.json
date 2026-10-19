@@ -40,14 +40,10 @@
   },
   "dependencies": {
     "git-remote-origin-url": "^4.0.0",
-    "github-label-sync": "^2.3.1",
-    "hosted-git-info": "^6.1.3",
-    "meow": "^11.0.0",
-    "try-resolve": "^1.0.1"
+    "github-label-sync": "^2.3.1"
   },
   "devDependencies": {
     "@types/github-label-sync": "^2.3.3",
-    "@types/hosted-git-info": "^3.0.5",
     "@types/mocha": "^10.0.10",
     "@types/node": "^26.6.5",
     "mocha": "^12.0.3",
