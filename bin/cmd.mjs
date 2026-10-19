@@ -40,19 +40,34 @@ const showHelp = (exitCode = 2) => {
     process.exit(exitCode);
 };
 
+// meow accepted camelCase flags too. Normalize them to dashed names so the last one wins.
+const camelCaseFlags = {
+    dryRun: "dry-run",
+    allowAddedLabels: "allow-added-labels"
+};
+const terminatorIndex = process.argv.indexOf("--", 2);
+const args = process.argv.slice(2).map((arg, index) => {
+    if (terminatorIndex !== -1 && index + 2 >= terminatorIndex) {
+        return arg;
+    }
+    const match = arg.match(/^--(no-)?([^=]+)(=.*)?$/);
+    if (!match || !Object.hasOwn(camelCaseFlags, match[2])) {
+        return arg;
+    }
+    return `--${match[1] ?? ""}${camelCaseFlags[match[2]]}${match[3] ?? ""}`;
+});
 let values;
 try {
     ({ values } = parseArgs({
+        args,
         allowNegative: true,
         options: {
             help: { type: "boolean", short: "h" },
             version: { type: "boolean" },
             "dry-run": { type: "boolean", short: "d" },
-            dryRun: { type: "boolean" },
             token: { type: "string" },
             labels: { type: "string", short: "l" },
             "allow-added-labels": { type: "boolean", short: "A" },
-            allowAddedLabels: { type: "boolean" },
             addReleaseYml: { type: "boolean", default: false },
             addReleaseYmlOutputPath: { type: "string", default: path.join(process.cwd(), ".github/release.yml") }
         }
@@ -69,10 +84,10 @@ if (values.version) {
     process.exit(0);
 }
 const flags = {
-    dryRun: values["dry-run"] ?? values.dryRun,
+    dryRun: values["dry-run"],
     token: values.token,
     labels: values.labels,
-    allowAddedLabels: values["allow-added-labels"] ?? values.allowAddedLabels,
+    allowAddedLabels: values["allow-added-labels"],
     addReleaseYml: values.addReleaseYml,
     addReleaseYmlOutputPath: values.addReleaseYmlOutputPath
 };
