@@ -19,10 +19,21 @@ const tryResolve = (id: string): string | null => {
 
 /**
  * Parse "owner/repo" from GitHub remote URL
- * e.g. git@github.com:owner/repo.git, https://github.com/owner/repo, ssh://git@github.com/owner/repo.git
+ * e.g. git@github.com:owner/repo.git, https://github.com/owner/repo, ssh://git@github.com:22/owner/repo.git
  */
 export const parseGitHubRepository = (remoteUrl: string): string | undefined => {
-    const match = remoteUrl.trim().match(/^(?:[\w+]+:\/\/)?(?:[^@/]+@)?github\.com[:/]([^/]+)\/([^/]+?)(?:\.git)?\/?$/);
+    const trimmed = remoteUrl.trim();
+    // SCP-like syntax: git@github.com:owner/repo.git
+    const scpLike = trimmed.match(/^(?:[^@/]+@)?(?:www\.)?github\.com:(?!\/)(.*)$/);
+    const pathname = scpLike ? scpLike[1].split(/[?#]/)[0] : (() => {
+        try {
+            const parsed = new URL(trimmed);
+            return ["github.com", "www.github.com"].includes(parsed.hostname) ? parsed.pathname : undefined;
+        } catch {
+            return;
+        }
+    })();
+    const match = pathname?.match(/^\/?([^/]+)\/([^/]+?)(?:\.git)?\/?$/);
     if (!match) {
         return;
     }

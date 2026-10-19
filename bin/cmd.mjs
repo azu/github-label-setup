@@ -43,6 +43,7 @@ const showHelp = (exitCode = 2) => {
 let values;
 try {
     ({ values } = parseArgs({
+        allowNegative: true,
         options: {
             help: { type: "boolean", short: "h" },
             version: { type: "boolean" },
