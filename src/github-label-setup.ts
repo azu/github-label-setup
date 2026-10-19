@@ -1,9 +1,6 @@
 import assert from "assert";
 import githubLabelSync, { LabelInfo } from "github-label-sync";
 import getRemoteOriginUrl from "git-remote-origin-url";
-// @ts-expect-error - no type
-import tryResolve from "try-resolve";
-import hostGitInto from "hosted-git-info";
 
 import url from "node:url";
 import path from "node:path";
@@ -11,19 +8,33 @@ import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 const __filename__ = url.fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename__);
-const { fromUrl } = hostGitInto;
+
+const tryResolve = (id: string): string | null => {
+    try {
+        return require.resolve(id);
+    } catch {
+        return null;
+    }
+};
 
 /**
- * @returns {Promise.<{ owner: string|null, repo: string|null}>}
+ * Parse "owner/repo" from GitHub remote URL
+ * e.g. git@github.com:owner/repo.git, https://github.com/owner/repo, ssh://git@github.com/owner/repo.git
+ */
+export const parseGitHubRepository = (remoteUrl: string): string | undefined => {
+    const match = remoteUrl.trim().match(/^(?:[\w+]+:\/\/)?(?:[^@/]+@)?github\.com[:/]([^/]+)\/([^/]+?)(?:\.git)?\/?$/);
+    if (!match) {
+        return;
+    }
+    return `${match[1]}/${match[2]}`;
+};
+
+/**
+ * @returns {Promise.<string|undefined>} "owner/repo"
  */
 const getRepositoryInfo = () => {
     return getRemoteOriginUrl().then(url => {
-        return fromUrl(url);
-    }).then(result => {
-        if (!result) {
-            return;
-        }
-        return `${result.user}/${result.project}`;
+        return parseGitHubRepository(url);
     });
 };
 
